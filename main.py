@@ -17,7 +17,7 @@ assert os.path.isfile(FILEPATH), f"You forgot to add a .blend file at {os.getcwd
 
 
 def calcArc(x,y,z,step):
-    return z*np.sqrt(  ((step-x)/z)**2+1)+y-z
+    return (z*np.sqrt(  ((step-x)/z)**2+1)/np.cos(ANGLE))+y
 
 def lerp(a,b,t):
     return a + (b-a)*t
